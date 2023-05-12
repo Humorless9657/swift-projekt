@@ -1,5 +1,8 @@
 # GRA W STATKI
 
+## Link
+https://humorless9657.github.io/swift-projekt/
+
 ## Skorzystano z
 - JavaScript
 - CSS
