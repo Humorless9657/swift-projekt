@@ -1,0 +1,219 @@
+@font-face {
+    font-family: rubik-iso;
+    src: url(../src/fonts/RubikIso.ttf);
+}
+
+@font-face {
+    font-family: stick-no-bills;
+    src: url(../src/fonts/StickNoBills.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #edf4fb;
+}
+
+#top {
+    background-color: #4992d3;
+    height: 15vh;
+    font-family: rubik-iso;
+    font-weight: bold;
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mid {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* background-color: #edf4fb; */
+}
+
+#info {
+    align-self: center;
+    font-family: stick-no-bills;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+button {
+    width: 12rem;
+    align-self: center;
+    font-family: stick-no-bills;
+    font-size: 2rem;
+    background-color: #4992d3;
+    border: 3px solid #0357a0;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+#random-button, #flip-button {
+    width: 8rem;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #0357a0;
+    cursor: pointer;
+}
+
+#boards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.grid-name {
+    font-family: stick-no-bills;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.grid-row {
+    display: flex;
+}
+
+.grid-row-element {
+    height: 40px;
+    width: 40px;
+    border: 2px solid #0357a0;
+    /* cursor: crosshair; */
+}
+
+/* .grid-row-element-computer:hover, */ .playable:hover {
+    background-color: aquamarine;
+    cursor: crosshair;
+}
+
+.ship {
+    background-color: orange;
+}
+
+.miss {
+    background-color: greenyellow;
+}
+
+.hit {
+    background-color: red;
+}
+
+.sunk {
+    background-color: blueviolet;
+}
+
+#results {
+    font-size: x-large;
+}
+
+.blocks-flex {
+    display: flex;
+    gap: 5px;
+}
+
+.block-container {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.block {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    background-color: orange;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+
+.drag-over {
+    border: dashed 3px red;
+}
+
+.hide {
+    display: none;
+}
+
+#player-name-div {
+    width: 30rem;
+    height: 10vh;
+    align-self: center;
+    font-family: stick-no-bills;
+    font-size: 1rem;
+    background-color: #4992d3;
+    border: 3px solid #0357a0;
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+#player-name-input {
+    border-radius: 5px;
+    border: 1px solid #0357a0;
+    outline: none;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blocks {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+    #top {
+        font-size: 2.5rem;
+        height: 5rem;
+    }
+
+    #boards {
+      flex-direction: column;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+
+    .grid-row-element {
+        height: 35px;
+        width: 35px;
+    }
+
+    #blocks {
+        display: none;
+    }
+
+    #flip-button {
+        display: none;
+    }
+
+    #random-button {
+        margin-left: 15px;
+    }
+
+    #info {
+        margin: 0;
+    }
+}
